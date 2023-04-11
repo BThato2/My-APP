@@ -47,12 +47,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "test",
+            "testLambda",
             {
               "Fn::Join": [
                 "",
                 [
-                  "test",
+                  "testLambda",
                   "-",
                   {
                     "Ref": "env"
@@ -89,12 +89,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "reactamplifiedLambdaRole6288452c",
+            "myappLambdaRolef1877d37",
             {
               "Fn::Join": [
                 "",
                 [
-                  "reactamplifiedLambdaRole6288452c",
+                  "myappLambdaRolef1877d37",
                   "-",
                   {
                     "Ref": "env"

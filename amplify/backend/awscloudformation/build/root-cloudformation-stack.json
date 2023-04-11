@@ -152,13 +152,27 @@
         }
       }
     },
-    "functiontest": {
+    "functiontestLambda": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-reactamplified-dev-150137-deployment/amplify-cfn-templates/function/test-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-myapp-dev-172343-deployment/amplify-cfn-templates/function/testLambda-cloudformation-template.json",
         "Parameters": {
-          "deploymentBucketName": "amplify-reactamplified-dev-150137-deployment",
-          "s3Key": "amplify-builds/test-7453466749354457786d-build.zip",
+          "deploymentBucketName": "amplify-myapp-dev-172343-deployment",
+          "s3Key": "amplify-builds/testLambda-334c4279565771365931-build.zip",
+          "env": "dev"
+        }
+      }
+    },
+    "apimyapp": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-myapp-dev-172343-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "Parameters": {
+          "AppSyncApiName": "myapp",
+          "DynamoDBBillingMode": "PAY_PER_REQUEST",
+          "DynamoDBEnableServerSideEncryption": false,
+          "S3DeploymentBucket": "amplify-myapp-dev-172343-deployment",
+          "S3DeploymentRootKey": "amplify-appsync-files/499456bfe52471f6da0d1ddbc02c0caeda2cb03a",
           "env": "dev"
         }
       }

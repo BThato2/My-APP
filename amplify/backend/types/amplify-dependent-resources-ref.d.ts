@@ -1,6 +1,13 @@
 export type AmplifyDependentResourcesAttributes = {
+  "api": {
+    "myapp": {
+      "GraphQLAPIEndpointOutput": "string",
+      "GraphQLAPIIdOutput": "string",
+      "GraphQLAPIKeyOutput": "string"
+    }
+  },
   "function": {
-    "test": {
+    "testLambda": {
       "Arn": "string",
       "LambdaExecutionRole": "string",
       "LambdaExecutionRoleArn": "string",
