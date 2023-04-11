@@ -1,6 +1,5 @@
 {
   "projectPath": "/Users/bthato/Documents/My-APP",
   "envName": "staging",
-  "defaultEditor": "vscode",
-  "noUpdateBackend": true
+  "defaultEditor": "vscode"
 }
