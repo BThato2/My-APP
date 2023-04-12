@@ -5,6 +5,11 @@ import styles from './page.module.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+  function handleClick() {
+    console.log(process.env.USER);
+  }
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -30,6 +35,10 @@ export default function Home() {
           </a>
         </div>
       </div>
+
+
+      
+
 
       <div className={styles.center}>
         <Image
@@ -59,7 +68,7 @@ export default function Home() {
             Find in-depth information about Next.js features and API.
           </p>
         </a>
-
+        <button onClick={handleClick()}>Like</button>
         <a
           href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className={styles.card}
